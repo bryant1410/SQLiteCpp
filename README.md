@@ -255,7 +255,7 @@ If you don't want assert() to be called, you have to enable and define an assert
 and by setting the flag SQLITECPP_ENABLE_ASSERT_HANDLER when compiling the lib.
 
 ```C++
-#ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
+# ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
 namespace SQLite
 {
 /// definition of the assertion handler enabled when SQLITECPP_ENABLE_ASSERT_HANDLER is defined in the project (CMakeList.txt)
@@ -266,7 +266,7 @@ void assertion_failed(const char* apFile, const long apLine, const char* apFunc,
     std::abort();
 }
 }
-#endif
+# endif
 ```
 
 ## How to contribute
